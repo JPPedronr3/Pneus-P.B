@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Mulish:ital,wght@0,200;0,300;1,200&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden;
+}
+
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a :hover{
+    opacity: 0.7s;
+    cursor: pointer;
+}
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family:system-ui, -apple-system,Helvetica, Arial, sans-serif;
+    color: #fff;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    background-color: #23232e;
+    display: flex;
+    height: 8vh;
+    width: 100%;
+}
+
+main .mainly{
+
+    background: url("../img/pneus.jpg") no-repeat center center;
+    height: 92vh;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+main .text-mainly{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    display: flex;
+    opacity: 0.85;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: overline;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hamburguer div{
+    background-color: #fff;
+    width: 32px;
+    height: 2px;
+    margin: 8px;
+    
+}
+
+.hamburguer{
+    display: none;
+    cursor: pointer;
+    
+}
+
+.contato{
+    height: 250px;
+    background-color:rgb(255, 255, 255);
+    opacity: 0.8;
+
+}
+
+
+
+.contato a{
+    color: #2e2e2e;
+}
+
+.contato-header{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    text-decoration: underline;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family:system-ui, -apple-system,Helvetica, sans-serif;
+
+}
+
+.img-wrapper img{
+
+    width: 50px;
+    height: 50px;
+}
+
+.img-wrapper{
+    overflow-y: hidden;
+}
+
+section{
+    overflow: hidden;
+}
+
+.information{
+    height: 150px;
+    background-color:rgb(255, 255, 255);
+    opacity: 0.8;
+
+}
+
+.information-header{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    text-decoration: underline;
+    
+    opacity: 0.95;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family:system-ui, -apple-system,Helvetica, sans-serif;
+}
+
+.contato-content{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    margin-top: 30px;
+    color: #2e2e2e;
+
+}
+
+.card{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    text-align: center;
+    width: 32%;
+}
+
+.card-header{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #000000;
+    opacity: 0.90;
+}
+
+.divisoria{
+    height: 20px;
+    background-color: #23232e;
+}
+
+.information-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    color: #262626;
+    font-size: 20px;
+}
+@media (max-width: 720px){
+    .information-content{
+        font-size: 16px;
+    }
+
+    .contato-content .card-content{
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 700px){
+    .logo{
+        font-size: 19px;
+        
+    }
+    nav {
+        font-size: 90%;
+    }
+    main .text-mainly{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 600px){
+    /*fullscreen of menu-mobile*/
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+        display: flex;
+        position: absolute;
+        top: 8vh;
+        height: 92vh;
+        right: 0;
+        width: 40%;
+        background-color: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+    }
+
+    .nav-list.active{
+        transform: translateX(0%);
+    }
+
+    .nav-list li{
+        margin-left: 0;
+    }
+
+    .hamburguer{
+        display: block;
+    }
+    
+    .conteudo{
+        flex-direction: column;
+        justify-content: center;
+        transform: translateY(0%);
+        align-items: center;
+    }
+    .produtos{
+        transform: translateY(0%);
+    }
+
+    main .text-mainly{
+        display: none;
+    }
+    .contato{
+        font-size: 80%;
+    }
+
+    .contato-content{
+        font-size: 90%;
+    }
+
+    .information-content{
+        font-size: 85%;
+    }
+}
+
